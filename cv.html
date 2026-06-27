@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV | Jiho Lee</title>
+  <meta name="description" content="CV of Jiho Lee, Chung-Ang University." />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+    </symbol>
+    <symbol id="icon-scholar" viewBox="0 0 24 24">
+      <path d="M22 10 12 5 2 10l10 5 10-5z"></path>
+      <path d="M6 12v5c3.2 2.2 8.8 2.2 12 0v-5"></path>
+      <path d="M22 10v6"></path>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <path d="M14 2v6h6"></path>
+      <path d="M8 13h8"></path>
+      <path d="M8 17h6"></path>
+    </symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path d="M12 3v12"></path>
+      <path d="m7 10 5 5 5-5"></path>
+      <path d="M5 21h14"></path>
+    </symbol>
+  </svg>
+  <header class="topbar">
+    <nav class="nav container">
+      <div class="brand-group">
+        <a class="brand" href="index.html">Jiho&nbsp;Lee</a>
+        <div class="brand-socials" aria-label="Profile links">
+          <a class="brand-icon" href="mailto:lee.jiho.mail@gmail.com" aria-label="Email" title="Email"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></a>
+          <a class="brand-icon" href="https://scholar.google.com/citations?user=hTMoYQoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true"><use href="#icon-scholar"></use></svg></a>
+          <a class="brand-icon brand-icon-in" href="https://www.linkedin.com/in/jiho-e" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a class="brand-icon" href="cv.html" aria-label="CV" title="CV"><svg aria-hidden="true"><use href="#icon-file"></use></svg></a>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#teaching">Teaching</a>
+        <a href="cv.html">CV</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container cv-main">
+    <div class="cv-header">
+      <div>
+        <h1>CV</h1>
+      </div>
+      <a class="link-btn" href="https://drive.google.com/file/d/1GBX7mLcFZLv5dvUhRBTlcgIPeSysyjgo/view" target="_blank" rel="noopener"><svg class="link-icon" aria-hidden="true"><use href="#icon-download"></use></svg>PDF</a>
+    </div>
+
+    <section class="cv-section">
+      <h2>Basics</h2>
+      <div class="cv-grid">
+        <div class="cv-label">Name</div>
+        <div>Jiho Lee</div>
+        <div class="cv-label">Email</div>
+        <div><a href="mailto:lee.jiho.mail@gmail.com">lee.jiho.mail@gmail.com</a></div>
+        <div class="cv-label">Google scholar</div>
+        <div><a href="https://scholar.google.com/citations?user=hTMoYQoAAAAJ">https://scholar.google.com/citations?user=hTMoYQoAAAAJ</a></div>
+        <div class="cv-label">LinkedIn</div>
+        <div><a href="https://linkedin.com/in/jiho-e">https://linkedin.com/in/jiho-e</a></div>
+
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+      <div class="cv-item">
+        <h3>Ph.D. in Computer Science and Engineering</h3>
+        <p>Chung-Ang University, Seoul, Republic of Korea · 2021.03 - 2026.08</p>
+      </div>
+      <div class="cv-item">
+        <h3>B.S. in Electrical and Electronic Engineering</h3>
+        <p>Chung-Ang University, Seoul, Republic of Korea · 2017.03 - 2021.02</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Research Interests</h2>
+      <div class="tag-list">
+        <span class="tag">Robot Learning</span>
+        <span class="tag">Active Learning</span>
+        <span class="tag">Machine Unlearning</span>
+        <span class="tag">Automated Deep Learning</span>
+        <span class="tag">Multi-Task Learning</span>
+        <span class="tag">Continual Learning</span>
+        <span class="tag">Human-in-the-loop Learning</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; <span id="year"></span> Jiho Lee
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

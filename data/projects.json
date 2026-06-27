@@ -1,0 +1,115 @@
+[
+  {
+    "title": "Lifelong Robot Learning",
+    "category": "Research",
+    "description": "This projects develops methods for lifelong learning that enables robots to leverage foundational knowledge and continuously adapt to new tasks, domains, and sensory modalities over time.",
+    "details": ["Funded by National Research Foundation"],
+    "keywords": ["Robot Learning"],
+    "image": "assets/projects/rl-nrf.png"
+  },
+  {
+    "title": "Multi-Modal Continual Learning with Context Understanding",
+    "category": "Research",
+    "description": "This project develops a continual learning method that exploits multi-modal inputs to learn tasks of various domains while comprehending their respective contexts.",
+    "details": ["Funded by National Research Foundation"],
+    "keywords": ["Continual Learning", "Multi-Modal Learning"],
+    "image": "assets/projects/mmcl-nrf.png"
+  },
+  {
+    "title": "Development of AI for Self-Improving Competency-Aware Learning",
+    "category": "Research",
+    "description": "This project develops an algorithm that explores optimal models and parameters of prerequisite learning tasks suitable for new learning situations.",
+    "details": ["Funded by IITP"],
+    "keywords": ["Continual Learning"],
+    "image": "assets/projects/improving-iitp.png"
+  },
+  {
+    "title": "AI-based Fingerprint Analysis of Gas Turbine Operations",
+    "category": "Research",
+    "description": "This project develops a deep learning approach to analyze and predict operating patterns from sequential data.",
+    "details": ["Funded by Doosan Enerbility"],
+    "keywords": ["Sequential Data"],
+    "image": "assets/projects/gas-turbine-doosan.png"
+  },
+  {
+    "title": "Automated Deep Learning Technology for Multi-Task Learning",
+    "category": "Research",
+    "description": "This project develops versatile deep learning approaches to perform multiple tasks on devices of limited capacity while avoiding task interference and model redundancy.",
+    "details": ["Funded by National Research Foundation"],
+    "keywords": ["Multi-Task Learning", "Automated Deep Learning"],
+    "image": "assets/projects/mtl-nrf.png"
+  },
+  {
+    "title": "Learning Transferable Task Knowledge and Planner for Service Robots",
+    "category": "Research",
+    "description": "This project develops an object-oriented framework to learn transferable knowledge and task hierarchy for robot task planning.",
+    "details": [
+      "Collaborated with Robots with Human Lab at Hanyang University",
+      "Funded by Samsung Research Funding & Incubation Center"
+    ],
+    "detailLinks": [
+      { "text": "Robots with Human Lab", "url": "https://sites.google.com/view/robots-oh" }
+    ],
+    "keywords": ["Service Robots", "Transferable Knowledge"],
+    "image": "assets/projects/service-robot-samsung.png"
+  },
+  {
+    "title": "Customized Neural Architecture Search and Proposal",
+    "category": "Research",
+    "description": "This project develops customized neural architecture search technology for visual tasks.",
+    "details": [
+      "Co-worked with AI Vision Lab at Samsung SDS",
+      "Funded by Samsung SDS"
+    ],
+    "keywords": ["Neural Architecture Search","Automated Deep Learning"],
+    "image": "assets/projects/nas-samsung-sds.png"
+  },
+  {
+    "title": "Pose Estimation for Bin-Picking with a 3D Model",
+    "category": "Research",
+    "description": "This project develops exact 6D pose estimation and instance segmentation algorithms for a robot bin-picking problem.",
+    "details": ["Funded by Doosan Digital Innovation"],
+    "keywords": ["Pose Estimation", "Robot Vision"],
+    "image": "assets/projects/bin-picking-doosan.png"
+  },
+  {
+    "title": "Deep Learning for Efficient Multi-Task Learning",
+    "category": "Research",
+    "description": "This project investigates learning methods for improving multi-task learning and continual learning approaches.",
+    "details": ["Funded by Korea Foundation for the Advancement of Science and Creativity"],
+    "keywords": ["Multi-Task Learning", "Continual Learning"],
+    "image": "assets/projects/mtl-urp.png"
+  },
+  {
+    "title": "An Outsider Identifying Algorithm for Group Photo Camera",
+    "category": "Other",
+    "description": "This project developed an algorithm for identifying outsiders using face recognition for group photos from a graduation project.",
+    "details": ["Graduation project, 2020"],
+    "keywords": ["Face Recognition"],
+    "image": ""
+  },
+  {
+    "title": "iOS Application for Finding Nearby Automated Teller Machines",
+    "category": "Other",
+    "description": "This project developed an iOS application for a map of ATMs located in the Republic of Korea.",
+    "details": ["Mobile app project, 2019"],
+    "keywords": ["iOS Application", "Mobile App"],
+    "image": ""
+  },
+  {
+    "title": "Cardiopulmonary Resuscitation Automation Device",
+    "category": "Other",
+    "description": "This project developed a CPR automation device that uses sensors and deep learning to analyze the user and adjust the pressure location and intensity.",
+    "details": ["Device project, 2018"],
+    "keywords": ["Healthcare Device"],
+    "image": ""
+  },
+  {
+    "title": "Bicycle Lock Device using RFID Communication",
+    "category": "Other",
+    "description": "This project developed a bicycle lock device that uses the user's identified RFID without requiring physical lock accessories.",
+    "details": ["Device project, 2017"],
+    "keywords": ["RFID Communication", "Mobile App"],
+    "image": ""
+  }
+]

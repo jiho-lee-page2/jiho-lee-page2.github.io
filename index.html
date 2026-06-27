@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jiho Lee</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        var theme = stored || (prefersDark ? "dark" : "light");
+        document.documentElement.setAttribute("data-theme", theme);
+      } catch (e) {}
+    })();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXV2RG3J3E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-FXV2RG3J3E');
+  </script>
+</head>
+
+</head>
+<body>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+    </symbol>
+    <symbol id="icon-scholar" viewBox="0 0 24 24">
+      <path d="M22 10 12 5 2 10l10 5 10-5z"></path>
+      <path d="M6 12v5c3.2 2.2 8.8 2.2 12 0v-5"></path>
+      <path d="M22 10v6"></path>
+    </symbol>
+    <symbol id="icon-file" viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <path d="M14 2v6h6"></path>
+      <path d="M8 13h8"></path>
+      <path d="M8 17h6"></path>
+    </symbol>
+  </svg>
+  <header class="topbar">
+    <nav class="nav container">
+      <div class="brand-group">
+        <a class="brand" href="#top">Jiho&nbsp;Lee</a>
+        <div class="brand-socials" aria-label="Profile links">
+          <a class="brand-icon" href="mailto:lee.jiho.mail@gmail.com" aria-label="Email" title="Email"><svg aria-hidden="true"><use href="#icon-mail"></use></svg></a>
+          <a class="brand-icon" href="https://scholar.google.com/citations?user=hTMoYQoAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg aria-hidden="true"><use href="#icon-scholar"></use></svg></a>
+          <a class="brand-icon brand-icon-in" href="https://www.linkedin.com/in/jiho-e" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">in</a>
+          <a class="brand-icon" href="cv.html" aria-label="CV" title="CV"><svg aria-hidden="true"><use href="#icon-file"></use></svg></a>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="cv.html">CV</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <section id="about" class="about">
+      <div class="profile-side">
+        <img class="avatar" src="assets/profile.jpg" alt="Portrait of Jiho Lee" />
+        <p class="photo-note">
+          <span>Feel free to reach out:)</span>
+          <span class="photo-note-center">🤝 Let’s connect 🤝</span>
+        </p>
+      </div>
+      <div class="about-text">
+        <h1>Jiho Lee</h1>
+        <p class="title">
+          <span>Ph.D. in AI &amp; Robotics</span>
+          <span class="position-badge">🔥 Seeking full-time position 🔥</span>
+        </p>
+        <p class="bio">
+          👋 I recently completed my Ph.D. in AI &amp; Robotics, advised by <a href="https://airlab.cau.ac.kr/members/professor/" target="_blank" rel="noopener">Prof. Eunwoo Kim</a>. 
+        </p>
+        <div class="bio-block">
+          <p class="bio bio-lead">
+            I’m passionate about <span class="bio-highlight">how robots can safely and continuously learn through interactions</span> with humans and the physical world, contributing to more harmonious human-robot coexistence.
+          </p>
+          <div class="bio-detail">
+            <p class="bio">
+              In my Ph.D. dissertation, I investigate how robots can continually improve their behavior by learning from useful experience <b>(Active Knowledge Acquisition)</b>, unlearning harmful behavior <b>(Selective Knowledge Removal)</b>, verifying uncertain behavior <b>(Self-corrective Knowledge Refinement)</b>, and grounding their behavior to the current physical context <b>(Environment-aware Knowledge Alignment)</b>.
+              <span class="thesis-title"><span class="thesis-title-label">Title</span> Toward Adaptive Robot Learning with Foundation Models: From Task Planning to Action Policies</span>
+            </p>
+            <p class="bio">
+              My research experience lies in <b>adaptive learning</b> inspired by <b>how humans learn and adapt to the world</b>, spanning <b>data construction</b>, <b>training</b>, and <b>deployment</b>, with an emphasis on <b>data reliability</b> and <b>resource efficiency</b> to make model behavior more <b>reliable</b>, <b>transferable</b>, and <b>context-aware</b>.
+            </p>
+          </div>
+        </div>
+        <div class="research-keywords" aria-label="Research keywords">
+          <span class="research-keywords-label">Keywords</span>
+          <span>Robot learning</span>
+          <span>Active learning</span>
+          <span>Machine unlearning</span>
+          <span>Multi-task learning</span>
+          <span>Continual learning</span>
+        </div>
+        <div class="links">
+          <a class="link-btn" href="mailto:lee.jiho.mail@gmail.com"><svg class="link-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>Email</a>
+          <a class="link-btn" href="https://scholar.google.com/citations?user=hTMoYQoAAAAJ" target="_blank" rel="noopener"><svg class="link-icon" aria-hidden="true"><use href="#icon-scholar"></use></svg>Google Scholar</a>
+          <a class="link-btn" href="https://www.linkedin.com/in/jiho-e" target="_blank" rel="noopener"><span class="link-icon link-icon-in" aria-hidden="true">in</span>LinkedIn</a>
+          <a class="link-btn" href="cv.html"><svg class="link-icon" aria-hidden="true"><use href="#icon-file"></use></svg>CV</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="news" class="news">
+      <h2>🔔 News</h2>
+      <ul id="news-list" class="news-list">
+        <li class="loading">Loading news...</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="publications">
+      <div class="section-heading pub-heading">
+        <h2>📖 Publications</h2>
+        <div id="pub-view-filters" class="pub-view-filters" role="group" aria-label="Publication view"></div>
+      </div>
+      <div class="pub-controls">
+        <input id="pub-search" class="pub-search" type="search" placeholder="Search title, author, venue, keyword..." aria-label="Search publications" />
+      </div>
+      <div class="pub-keyword-row">
+        <span class="pub-filter-caption">Keywords</span>
+        <div id="keyword-filters" class="keyword-filters" role="group" aria-label="Filter by keyword"></div>
+      </div>
+      <div id="pub-filter-label" class="filter-label">Filtering by: Selected</div>
+      <ol id="pub-list" class="pub-list">
+        <li class="loading">Loading publications...</li>
+      </ol>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>💻 Projects</h2>
+      <div id="project-list" class="project-list">
+        <div class="loading">Loading projects...</div>
+      </div>
+    </section>
+
+    <section id="teaching" class="teaching">
+      <h2>🏫 Teaching</h2>
+      <ul class="teaching-list">
+        <li><strong>Assistant - Advanced Artificial Intelligence</strong> (55697) · Spring 2024 · Chung-Ang University</li>
+        <li><strong>Assistant - Machine Learning</strong> (54616) · Spring 2023 · Chung-Ang University</li>
+        <li><strong>Assistant - Capstone Design</strong> (50178) · Fall 2021 · Chung-Ang University</li>
+        <li><strong>Assistant - Algorithms</strong> (13601) · Spring 2021 · Chung-Ang University</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; <span id="year"></span> Jiho Lee
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
