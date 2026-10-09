@@ -2,7 +2,10 @@
   {
     "date": "2026-06",
     "text": "🎓 I successfully defended my Ph.D. dissertation,\n\"Toward Adaptive Robot Learning with Foundation Models: From Task Planning to Action Policies\"!",
-    "link": "",
+    "link": "assets/papers/Jiho_Lee_Ph.D.Dissertation.pdf",
+    "linkPhrases": [
+      "my Ph.D. dissertation"
+    ],
     "boldPhrases": [
       "Toward Adaptive Robot Learning with Foundation Models: From Task Planning to Action Policies"
     ]

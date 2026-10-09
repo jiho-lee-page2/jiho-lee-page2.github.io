@@ -1,12 +1,12 @@
 [
   {
-    "title": "Sparse Feature Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
-    "authors": ["Jiho Lee", "Taekyung Kim", "Heayoun Choi", "Jeongeun Park", "Eunwoo Kim"],
+    "title": "Can Vision-Language-Action Models Adapt to Visual Perturbations Using a Test-Time Trajectory?",
+    "authors": ["Jiho Lee", "Heayoun Choi", "Eunwoo Kim"],
     "venue": "Under Review",
     "year": 2026,
     "hideYear": true,
     "selected": true,
-    "keywords": ["Foundation Model", "Machine Unlearning", "Robot Learning"],
+    "keywords": ["Robot Learning"],
     "image": "",
     "imageLabel": "Under Review",
     "links": {
@@ -16,21 +16,31 @@
       "project": ""
     }
   },
-  {
-    "title": "Can Vision-Language-Action Models Adapt to Visual Perturbations Using a Test-Time Trajectory?",
-    "authors": ["Jiho Lee", "Heayoun Choi", "Eunwoo Kim"],
-    "venue": "Under Review",
+    {
+    "title": "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
+    "authors": ["Jiho Lee", "Jeongeun Park", "Heayoun Choi", "Taekyung Kim", "Eunwoo Kim"],
+    "venue": "arXiv preprint",
     "year": 2026,
-    "hideYear": true,
     "selected": true,
-    "keywords": ["Foundation Model", "Robot Learning"],
-    "image": "",
-    "imageLabel": "Under Review",
+    "keywords": ["Machine Unlearning", "Robot Learning"],
+    "image": "assets/papers/soul.png",
     "links": {
-      "paper": "",
-      "video": "",
+      "paper": "https://arxiv.org/abs/2610.09496",
+      "video": "https://hallucination-unlearning2.github.io/assets/hallucination-unlearning_video.mp4",
       "code": "",
       "project": ""
+    }
+  },
+  {
+    "title": "Toward Adaptive Robot Learning with Foundation Models: From Task Planning to Action Policies",
+    "authors": ["Jiho Lee"],
+    "venue": "Ph.D. Dissertation",
+    "year": 2026,
+    "selected": true,
+    "keywords": ["Robot Learning", "Active Learning", "Machine Unlearning"],
+    "image": "assets/papers/phd-dissertation.png",
+    "links": {
+      "paper": "assets/papers/Jiho_Lee_Ph.D.Dissertation.pdf"
     }
   },
   {
@@ -52,11 +62,11 @@
   {
     "title": "Contrastive In-Context Learning with Active Memory for Task Planning",
     "authors": ["Jiho Lee", "Kyungjae Lee", "Eunwoo Kim"],
-    "venue": "Conference on Robot Learning (CoRL) Workshop on Making Sense of Data in Robotics",
+    "venue": "Conference on Robot Learning Workshop on Making Sense of Data in Robotics",
     "year": 2025,
-    "note": "",
+    "note": "CoRLW 2025",
     "selected": true,
-    "keywords": ["Robot Learning", "Active Learning", "Machine Unlearning", "Foundation Model"],
+    "keywords": ["Robot Learning", "Active Learning", "Machine Unlearning"],
     "image": "assets/papers/cicl-active-corl.png",
     "links": {
       "paper": "https://openreview.net/forum?id=NaayWmHgL1",
@@ -71,7 +81,7 @@
     "venue": "International Journal of Control, Automation and Systems (IJCAS)",
     "year": 2025,
     "note": "IF 2.8, Top 40%",
-    "venueNote": "Also presented at ICCAS 2025",
+    "venueNote": "ICCAS 2025",
     "keywords": ["Robot Learning"],
     "image": "assets/papers/robot-planning-ijcas.png",
     "links": {
@@ -99,11 +109,11 @@
   {
     "title": "Self-Corrective Task Planning by Inverse Prompting with Large Language Models",
     "authors": ["Jiho Lee", "Hayun Lee", "Jonghyeon Kim", "Kyungjae Lee", "Eunwoo Kim"],
-    "venue": "IEEE International Conference on Robotics and Automation (ICRA)",
+    "venue": "IEEE International Conference on Robotics and Automation",
     "year": 2025,
-    "note": "",
+    "note": "ICRA 2025",
     "selected": true,
-    "keywords": ["Robot Learning", "Foundation Model"],
+    "keywords": ["Robot Learning"],
     "image": "assets/papers/inverse-prompt-icra.png",
     "links": {
       "paper": "https://ieeexplore.ieee.org/document/11128028",
@@ -115,9 +125,9 @@
   {
     "title": "Active Learning with Selective Removing",
     "authors": ["Jiho Lee", "Eunwoo Kim"],
-    "venue": "International Conference on Information and Communication Technology Convergence (ICTC)",
+    "venue": "International Conference on Information and Communication Technology Convergence",
     "year": 2024,
-    "note": "",
+    "note": "ICTC 2024",
     "keywords": ["Active Learning", "Machine Unlearning"],
     "image": "assets/papers/active-removing-ictc.png",
     "links": {

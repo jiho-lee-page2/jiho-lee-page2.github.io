@@ -17,6 +17,56 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  var sectionNav = navLinks.map(function (link) {
+    var href = link.getAttribute("href") || "";
+    return href.charAt(0) === "#" ? { link: link, section: document.getElementById(href.slice(1)) } : null;
+  }).filter(function (item) { return item && item.section; });
+
+  function setActiveNav(activeLink, currentType) {
+    navLinks.forEach(function (link) {
+      if (link === activeLink) link.setAttribute("aria-current", currentType);
+      else link.removeAttribute("aria-current");
+    });
+  }
+
+  if (sectionNav.length) {
+    var topbar = document.querySelector(".topbar");
+    var navUpdateQueued = false;
+
+    function updateActiveNav() {
+      var activeLink = sectionNav[0].link;
+      var activationLine = (topbar ? topbar.getBoundingClientRect().bottom : 0) + 16;
+      sectionNav.forEach(function (item) {
+        if (item.section.getBoundingClientRect().top <= activationLine) activeLink = item.link;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+        activeLink = sectionNav[sectionNav.length - 1].link;
+      }
+      setActiveNav(activeLink, "location");
+    }
+
+    function scheduleNavUpdate() {
+      if (navUpdateQueued) return;
+      navUpdateQueued = true;
+      requestAnimationFrame(function () {
+        navUpdateQueued = false;
+        updateActiveNav();
+      });
+    }
+
+    sectionNav.forEach(function (item) {
+      item.link.addEventListener("click", function () { setActiveNav(item.link, "location"); });
+    });
+    window.addEventListener("scroll", scheduleNavUpdate, { passive: true });
+    window.addEventListener("resize", scheduleNavUpdate);
+    window.addEventListener("load", scheduleNavUpdate);
+    updateActiveNav();
+  } else {
+    var cvLink = document.querySelector('.nav-links a[href="cv.html"]');
+    if (cvLink) setActiveNav(cvLink, "page");
+  }
+
   function el(tag, className, text) {
     var n = document.createElement(tag);
     if (className) n.className = className;
@@ -84,8 +134,13 @@
     }
     if (item.image) {
       var img = document.createElement("img");
-      img.src = item.image;
       img.alt = item.title;
+      img.onerror = function () {
+        box.innerHTML = "";
+        box.appendChild(el("span", type + "-thumb-mark", initials(item.title)));
+        box.appendChild(el("span", type + "-thumb-note", "Image unavailable"));
+      };
+      img.src = item.image;
       box.appendChild(img);
       return box;
     }
@@ -218,7 +273,7 @@
     "Test-Time Adaptation": { color: "#0ea5e9", bg: "rgba(14, 165, 233, 0.10)", border: "rgba(14, 165, 233, 0.24)", hover: "rgba(14, 165, 233, 0.17)" },
     "Continual Learning": { color: "#0d9488", bg: "rgba(13, 148, 136, 0.10)", border: "rgba(13, 148, 136, 0.25)", hover: "rgba(13, 148, 136, 0.17)" },
     "Multi-Modal Learning": { color: "#4f46e5", bg: "rgba(79, 70, 229, 0.10)", border: "rgba(79, 70, 229, 0.24)", hover: "rgba(79, 70, 229, 0.16)" },
-    "Automated Deep Learning": { color: "#0e7490", bg: "rgba(14, 116, 144, 0.10)", border: "rgba(14, 116, 144, 0.24)", hover: "rgba(14, 116, 144, 0.17)" },
+    "Automated Deep Learning": { color: "#6d28d9", bg: "rgba(109, 40, 217, 0.10)", border: "rgba(109, 40, 217, 0.24)", hover: "rgba(109, 40, 217, 0.17)" },
     "Service Robots": { color: "#15803d", bg: "rgba(21, 128, 61, 0.10)", border: "rgba(21, 128, 61, 0.24)", hover: "rgba(21, 128, 61, 0.17)" },
     "Robot Vision": { color: "#0369a1", bg: "rgba(3, 105, 161, 0.10)", border: "rgba(3, 105, 161, 0.24)", hover: "rgba(3, 105, 161, 0.17)" },
     "Sequential Data": { color: "#a16207", bg: "rgba(161, 98, 7, 0.11)", border: "rgba(161, 98, 7, 0.25)", hover: "rgba(161, 98, 7, 0.18)" },
