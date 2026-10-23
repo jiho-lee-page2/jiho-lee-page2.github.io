@@ -387,7 +387,7 @@ section { padding: 40px 0; }
 
 .news,
 .projects,
-.service {
+.teaching {
   background: var(--section-tint);
   box-shadow: 0 0 0 100vmax var(--section-tint);
   clip-path: inset(0 -100vmax);
