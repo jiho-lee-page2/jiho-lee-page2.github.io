@@ -1,22 +1,5 @@
 [
   {
-    "title": "Can Vision-Language-Action Models Adapt to Visual Perturbations Using a Test-Time Trajectory?",
-    "authors": ["Jiho Lee", "Heayoun Choi", "Eunwoo Kim"],
-    "venue": "Under Review",
-    "year": 2026,
-    "hideYear": true,
-    "selected": true,
-    "keywords": ["Robot Learning"],
-    "image": "",
-    "imageLabel": "Under Review",
-    "links": {
-      "paper": "",
-      "video": "",
-      "code": "",
-      "project": ""
-    }
-  },
-    {
     "title": "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
     "authors": ["Jiho Lee", "Jeongeun Park", "Heayoun Choi", "Taekyung Kim", "Eunwoo Kim"],
     "venue": "arXiv preprint",
@@ -29,6 +12,22 @@
       "video": "https://soul-vla.github.io/assets/soul-vla_video.mp4",
       "code": "",
       "project": "https://soul-vla.github.io/"
+    }
+  },
+  {
+    "title": "Can Vision-Language-Action Models Adapt to Visual Perturbations Using a Test-Time Trajectory?",
+    "authors": ["Jiho Lee", "Heayoun Choi", "Eunwoo Kim"],
+    "venue": "IEEE Robotics and Automation Letters (RA-L)",
+    "year": 2026,
+    "note": "IF 5.3, Top 31%",
+    "selected": true,
+    "keywords": ["Robot Learning"],
+    "image": "assets/papers/tta-vla-ral.png",
+    "links": {
+      "paper": "https://tta-vla2.github.io/assets/tta-vla_paper.pdf",
+      "video": "",
+      "code": "",
+      "project": "https://tta-vla2.github.io/"
     }
   },
   {

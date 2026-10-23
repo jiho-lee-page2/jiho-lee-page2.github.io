@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-10",
+    "text": "Our paper on VLA model adaptation got accepted to IEEE Robotics and Automation Letters (RA-L)!",
+    "link": "https://tta-vla2.github.io/",
+    "linkPhrases": [
+      { "text": "Our paper", "url": "https://tta-vla2.github.io/" },
+      { "text": "IEEE Robotics and Automation Letters (RA-L)", "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=7083369" }
+    ]
+  },
+  {
     "date": "2026-06",
     "text": "🎓 I successfully defended my Ph.D. dissertation,\n\"Toward Adaptive Robot Learning with Foundation Models: From Task Planning to Action Policies\"!",
     "link": "assets/papers/Jiho_Lee_Ph.D.Dissertation.pdf",
@@ -12,7 +21,7 @@
   },
   {
     "date": "2026-06",
-    "text": "Our paper on active forgetting accepted to Neurocomputing!",
+    "text": "Our paper on active forgetting got accepted to Neurocomputing!",
     "link": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226016292?via%3Dihub",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925231226016292?via%3Dihub" },
@@ -21,7 +30,7 @@
   },
   {
     "date": "2025-09",
-    "text": "Our paper on in-context learning agents for robot task planning accepted to the CoRL 2025 Workshop!",
+    "text": "Our paper on in-context learning agents for robot task planning got accepted to the CoRL 2025 Workshop!",
     "link": "https://openreview.net/forum?id=NaayWmHgL1",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://openreview.net/forum?id=NaayWmHgL1" },
@@ -30,7 +39,7 @@
   },
   {
     "date": "2025-08",
-    "text": "Our paper on a modular framework for long-horizon robot tasks accepted to ICCAS 2025 and the International Journal of Control, Automation and Systems!",
+    "text": "Our paper on a modular framework for long-horizon robot tasks got accepted to ICCAS 2025 and the International Journal of Control, Automation and Systems!",
     "link": "https://link.springer.com/article/10.1007/s12555-025-0524-5",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://link.springer.com/article/10.1007/s12555-025-0524-5" },
@@ -40,7 +49,7 @@
   },
   {
     "date": "2025-05",
-    "text": "Our paper on 3D human pose estimation accepted to Computer Vision and Image Understanding!",
+    "text": "Our paper on 3D human pose estimation got accepted to Computer Vision and Image Understanding!",
     "link": "https://www.sciencedirect.com/science/article/pii/S1077314225001043",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://www.sciencedirect.com/science/article/pii/S1077314225001043" },
@@ -49,7 +58,7 @@
   },
   {
     "date": "2025-01",
-    "text": "Our paper on self-corrective robot task planning accepted to ICRA 2025!",
+    "text": "Our paper on self-corrective robot task planning got accepted to ICRA 2025!",
     "link": "https://ieeexplore.ieee.org/document/11128028",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://ieeexplore.ieee.org/document/11128028" },
@@ -58,7 +67,7 @@
   },
   {
     "date": "2024-07",
-    "text": "Our paper on active learning accepted to IEEE Signal Processing Letters!",
+    "text": "Our paper on active learning got accepted to IEEE Signal Processing Letters!",
     "link": "https://ieeexplore.ieee.org/document/10614786",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://ieeexplore.ieee.org/document/10614786" },
@@ -67,7 +76,7 @@
   },
   {
     "date": "2024-04",
-    "text": "Our paper on neural architecture search with multi-task learning accepted to IEEE Transactions on Image Processing!",
+    "text": "Our paper on neural architecture search with multi-task learning got accepted to IEEE Transactions on Image Processing!",
     "link": "https://ieeexplore.ieee.org/document/10508322",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://ieeexplore.ieee.org/document/10508322" },
@@ -81,7 +90,7 @@
   },
   {
     "date": "2022-03",
-    "text": "Our paper on multi-task learning accepted to IEEE Access!",
+    "text": "Our paper on multi-task learning got accepted to IEEE Access!",
     "link": "https://ieeexplore.ieee.org/document/9740124",
     "linkPhrases": [
       { "text": "Our paper", "url": "https://ieeexplore.ieee.org/document/9740124" },

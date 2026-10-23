@@ -386,7 +386,8 @@ section { padding: 40px 0; }
 }
 
 .news,
-.projects {
+.projects,
+.service {
   background: var(--section-tint);
   box-shadow: 0 0 0 100vmax var(--section-tint);
   clip-path: inset(0 -100vmax);
@@ -802,6 +803,14 @@ section { padding: 40px 0; }
 .teaching-list li { padding: 11px 0; border-bottom: 1px solid var(--border); color: var(--text-soft); font-size: 1rem; }
 .teaching-list li:last-child { border-bottom: none; }
 .teaching-list strong { color: var(--text); font-size: 1.04rem; }
+
+.service-block h3 {
+  margin: 0 0 12px;
+  color: var(--text);
+  font-size: 1.12rem;
+}
+.service-list { margin: 0; padding-left: 1.3rem; }
+.service-list li { margin: 8px 0; color: var(--text-soft); font-size: 1rem; line-height: 1.65; }
 
 .loading { color: var(--text-soft); font-style: italic; padding: 10px 0; }
 .error { color: #e5484d; }
