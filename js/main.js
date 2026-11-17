@@ -114,12 +114,10 @@
     Object.keys(labels).forEach(function (key) {
       var url = links && links[key];
       if (!url) return;
-      var a = el("a", "chip chip-" + key);
+      var a = el("a", "chip chip-" + key, labels[key]);
       a.href = url;
       a.target = "_blank";
       a.rel = "noopener";
-      a.appendChild(el("span", "chip-icon chip-icon-" + key));
-      a.appendChild(document.createTextNode(labels[key]));
       wrap.appendChild(a);
     });
     return wrap;
@@ -253,77 +251,19 @@
   }
 
   var allPapers = [];
-  var SELECTED_FILTER = "__selected__";
   var activeKeywords = [];
-  var searchTerm = "";
   var FIRST_AUTHOR_FILTER = "__first_author__";
   var FILTER_HIDDEN_KEYWORDS = {
     "Human Pose Estimation": true
   };
-  var KEYWORD_COLORS = {
-    "Active Learning": { color: "#f97316", bg: "rgba(249, 115, 22, 0.11)", border: "rgba(249, 115, 22, 0.28)", hover: "rgba(249, 115, 22, 0.18)" },
-    "Machine Unlearning": { color: "#e11d48", bg: "rgba(225, 29, 72, 0.10)", border: "rgba(225, 29, 72, 0.26)", hover: "rgba(225, 29, 72, 0.17)" },
-    "Multi-Task Learning": { color: "#0f766e", bg: "rgba(15, 118, 110, 0.10)", border: "rgba(15, 118, 110, 0.25)", hover: "rgba(15, 118, 110, 0.17)" },
-    "Robot Learning": { color: "#2563eb", bg: "rgba(37, 99, 235, 0.10)", border: "rgba(37, 99, 235, 0.24)", hover: "rgba(37, 99, 235, 0.17)" },
-    "Foundation Model": { color: "#7c3aed", bg: "rgba(124, 58, 237, 0.10)", border: "rgba(124, 58, 237, 0.24)", hover: "rgba(124, 58, 237, 0.16)" },
-    "Task Planning": { color: "#65a30d", bg: "rgba(101, 163, 13, 0.11)", border: "rgba(101, 163, 13, 0.26)", hover: "rgba(101, 163, 13, 0.18)" },
-    "Human Pose Estimation": { color: "#db2777", bg: "rgba(219, 39, 119, 0.10)", border: "rgba(219, 39, 119, 0.24)", hover: "rgba(219, 39, 119, 0.17)" },
-    "Neural Architecture Search": { color: "#c026d3", bg: "rgba(192, 38, 211, 0.10)", border: "rgba(192, 38, 211, 0.24)", hover: "rgba(192, 38, 211, 0.17)" },
-    "Vision-Language-Action Models": { color: "#16a34a", bg: "rgba(22, 163, 74, 0.10)", border: "rgba(22, 163, 74, 0.25)", hover: "rgba(22, 163, 74, 0.17)" },
-    "Test-Time Adaptation": { color: "#0ea5e9", bg: "rgba(14, 165, 233, 0.10)", border: "rgba(14, 165, 233, 0.24)", hover: "rgba(14, 165, 233, 0.17)" },
-    "Continual Learning": { color: "#0d9488", bg: "rgba(13, 148, 136, 0.10)", border: "rgba(13, 148, 136, 0.25)", hover: "rgba(13, 148, 136, 0.17)" },
-    "Multi-Modal Learning": { color: "#4f46e5", bg: "rgba(79, 70, 229, 0.10)", border: "rgba(79, 70, 229, 0.24)", hover: "rgba(79, 70, 229, 0.16)" },
-    "Automated Deep Learning": { color: "#6d28d9", bg: "rgba(109, 40, 217, 0.10)", border: "rgba(109, 40, 217, 0.24)", hover: "rgba(109, 40, 217, 0.17)" },
-    "Service Robots": { color: "#15803d", bg: "rgba(21, 128, 61, 0.10)", border: "rgba(21, 128, 61, 0.24)", hover: "rgba(21, 128, 61, 0.17)" },
-    "Robot Vision": { color: "#0369a1", bg: "rgba(3, 105, 161, 0.10)", border: "rgba(3, 105, 161, 0.24)", hover: "rgba(3, 105, 161, 0.17)" },
-    "Sequential Data": { color: "#a16207", bg: "rgba(161, 98, 7, 0.11)", border: "rgba(161, 98, 7, 0.25)", hover: "rgba(161, 98, 7, 0.18)" },
-    "Transferable Knowledge": { color: "#ea580c", bg: "rgba(234, 88, 12, 0.10)", border: "rgba(234, 88, 12, 0.24)", hover: "rgba(234, 88, 12, 0.17)" },
-    "Pose Estimation": { color: "#be185d", bg: "rgba(190, 24, 93, 0.10)", border: "rgba(190, 24, 93, 0.24)", hover: "rgba(190, 24, 93, 0.17)" },
-    "Face Recognition": { color: "#7c2d12", bg: "rgba(124, 45, 18, 0.10)", border: "rgba(124, 45, 18, 0.24)", hover: "rgba(124, 45, 18, 0.17)" },
-    "iOS Application": { color: "#0284c7", bg: "rgba(2, 132, 199, 0.10)", border: "rgba(2, 132, 199, 0.24)", hover: "rgba(2, 132, 199, 0.17)" },
-    "Mobile App": { color: "#1d4ed8", bg: "rgba(29, 78, 216, 0.10)", border: "rgba(29, 78, 216, 0.24)", hover: "rgba(29, 78, 216, 0.17)" },
-    "Healthcare Device": { color: "#dc2626", bg: "rgba(220, 38, 38, 0.10)", border: "rgba(220, 38, 38, 0.26)", hover: "rgba(220, 38, 38, 0.17)" },
-    "RFID Communication": { color: "#9333ea", bg: "rgba(147, 51, 234, 0.10)", border: "rgba(147, 51, 234, 0.24)", hover: "rgba(147, 51, 234, 0.16)" }
-  };
-  var KEYWORD_COLOR_POOL = [
-    { color: "#2563eb", bg: "rgba(37, 99, 235, 0.10)", border: "rgba(37, 99, 235, 0.24)", hover: "rgba(37, 99, 235, 0.17)" },
-    { color: "#f97316", bg: "rgba(249, 115, 22, 0.11)", border: "rgba(249, 115, 22, 0.28)", hover: "rgba(249, 115, 22, 0.18)" },
-    { color: "#16a34a", bg: "rgba(22, 163, 74, 0.10)", border: "rgba(22, 163, 74, 0.25)", hover: "rgba(22, 163, 74, 0.17)" },
-    { color: "#e11d48", bg: "rgba(225, 29, 72, 0.10)", border: "rgba(225, 29, 72, 0.26)", hover: "rgba(225, 29, 72, 0.17)" },
-    { color: "#7c3aed", bg: "rgba(124, 58, 237, 0.10)", border: "rgba(124, 58, 237, 0.24)", hover: "rgba(124, 58, 237, 0.16)" },
-    { color: "#0f766e", bg: "rgba(15, 118, 110, 0.10)", border: "rgba(15, 118, 110, 0.25)", hover: "rgba(15, 118, 110, 0.17)" },
-    { color: "#db2777", bg: "rgba(219, 39, 119, 0.10)", border: "rgba(219, 39, 119, 0.24)", hover: "rgba(219, 39, 119, 0.17)" },
-    { color: "#65a30d", bg: "rgba(101, 163, 13, 0.11)", border: "rgba(101, 163, 13, 0.26)", hover: "rgba(101, 163, 13, 0.18)" },
-    { color: "#c026d3", bg: "rgba(192, 38, 211, 0.10)", border: "rgba(192, 38, 211, 0.24)", hover: "rgba(192, 38, 211, 0.17)" }
-  ];
-
   function sortKeywords(keywords) {
     return (keywords || []).slice().filter(Boolean).sort(function (a, b) {
       return String(a).localeCompare(String(b), undefined, { sensitivity: "base" });
     });
   }
 
-  function fallbackKeywordColor(keyword) {
-    var hash = 0;
-    for (var i = 0; i < keyword.length; i++) {
-      hash = ((hash << 5) - hash) + keyword.charCodeAt(i);
-      hash |= 0;
-    }
-    return KEYWORD_COLOR_POOL[Math.abs(hash) % KEYWORD_COLOR_POOL.length];
-  }
-
-  function applyKeywordColor(node, keyword) {
-    var colors = KEYWORD_COLORS[keyword] || fallbackKeywordColor(keyword);
-    node.style.setProperty("--keyword-color", colors.color);
-    node.style.setProperty("--keyword-bg", colors.bg);
-    node.style.setProperty("--keyword-border", colors.border);
-    node.style.setProperty("--keyword-hover-bg", colors.hover);
-  }
-
   function makeTag(keyword) {
-    var tag = el("span", "tag keyword-colored", keyword);
-    applyKeywordColor(tag, keyword);
-    return tag;
+    return el("span", "tag", keyword);
   }
 
   function appendLinkedText(node, text, links) {
@@ -356,47 +296,23 @@
   function paperMatches(p) {
     var keywords = p.keywords || [];
     if (activeKeywords.indexOf(FIRST_AUTHOR_FILTER) !== -1 && (!p.authors || p.authors[0] !== ME)) return false;
-    if (activeKeywords.indexOf(SELECTED_FILTER) !== -1 && !p.selected) return false;
     for (var i = 0; i < activeKeywords.length; i++) {
       var active = activeKeywords[i];
-      if (active !== FIRST_AUTHOR_FILTER && active !== SELECTED_FILTER && keywords.indexOf(active) === -1) return false;
-    }
-    if (searchTerm) {
-      var hay = [
-        p.title,
-        (p.authors || []).join(" "),
-        p.venue,
-        String(p.year || ""),
-        keywords.join(" ")
-      ].join(" ").toLowerCase();
-      if (hay.indexOf(searchTerm) === -1) return false;
+      if (active !== FIRST_AUTHOR_FILTER && keywords.indexOf(active) === -1) return false;
     }
     return true;
   }
 
-  function updateFilterLabel() {
-    var label = document.getElementById("pub-filter-label");
-    if (!label) return;
-    if (!activeKeywords.length) {
-      label.textContent = "Filtering by: Show all";
-      return;
-    }
-    var labelText = activeKeywords.map(function (keyword) {
-      if (keyword === SELECTED_FILTER) return "Selected";
-      return keyword === FIRST_AUTHOR_FILTER ? "First-author" : keyword;
-    }).join(" + ");
-    label.textContent = "Filtering by: " + labelText;
-  }
-
   function makeKeyword(keyword) {
-    var text = keyword === "all" ? "Show all" : keyword;
+    var text = keyword === "all" ? "All" : keyword;
     if (keyword === FIRST_AUTHOR_FILTER) text = "First-author";
-    if (keyword === SELECTED_FILTER) text = "Selected";
     var isActive = keyword === "all" ? !activeKeywords.length : activeKeywords.indexOf(keyword) !== -1;
-    var isColored = keyword !== "all" && keyword !== FIRST_AUTHOR_FILTER && keyword !== SELECTED_FILTER;
-    var b = el("button", "keyword-btn" + (isColored ? " keyword-colored" : "") + (isActive ? " active" : ""), text);
+    var isViewFilter = keyword === "all" || keyword === FIRST_AUTHOR_FILTER;
+    var filterType = isViewFilter ? " filter-view" : " filter-keyword";
+    var b = el("button", "keyword-btn" + filterType + (isActive ? " active" : ""));
     b.type = "button";
-    if (isColored) applyKeywordColor(b, keyword);
+    b.setAttribute("aria-pressed", isActive ? "true" : "false");
+    b.appendChild(document.createTextNode(text));
     b.addEventListener("click", function () {
       if (keyword === "all") {
         activeKeywords = [];
@@ -404,32 +320,28 @@
         activeKeywords = [keyword];
       }
       buildKeywordFilters();
-      updateFilterLabel();
       renderPapers();
     });
     return b;
   }
 
   function buildKeywordFilters() {
-    var keywordWrap = document.getElementById("keyword-filters");
-    var viewWrap = document.getElementById("pub-view-filters");
-    if (keywordWrap) keywordWrap.innerHTML = "";
-    if (viewWrap) viewWrap.innerHTML = "";
+    var filterWrap = document.getElementById("publication-filters");
+    if (!filterWrap) return;
+    filterWrap.innerHTML = "";
     var seen = {};
     allPapers.forEach(function (p) {
       (p.keywords || []).forEach(function (k) {
         if (!FILTER_HIDDEN_KEYWORDS[k]) seen[k] = true;
       });
     });
-    var viewTarget = viewWrap || keywordWrap;
-    if (viewTarget) {
-      viewTarget.appendChild(makeKeyword("all"));
-      viewTarget.appendChild(makeKeyword(SELECTED_FILTER));
-      viewTarget.appendChild(makeKeyword(FIRST_AUTHOR_FILTER));
-    }
-    if (keywordWrap) {
-      sortKeywords(Object.keys(seen)).forEach(function (k) { keywordWrap.appendChild(makeKeyword(k)); });
-    }
+    filterWrap.appendChild(makeKeyword("all"));
+    filterWrap.appendChild(makeKeyword(FIRST_AUTHOR_FILTER));
+    var separator = el("span", "pub-filter-separator");
+    separator.setAttribute("aria-hidden", "true");
+    filterWrap.appendChild(separator);
+    filterWrap.appendChild(el("span", "pub-keyword-caption", "Keywords"));
+    sortKeywords(Object.keys(seen)).forEach(function (k) { filterWrap.appendChild(makeKeyword(k)); });
   }
 
   function makePubItem(p) {
@@ -476,14 +388,6 @@
       return;
     }
     filtered.forEach(function (p) { list.appendChild(makePubItem(p)); });
-  }
-
-  var searchInput = document.getElementById("pub-search");
-  if (searchInput) {
-    searchInput.addEventListener("input", function () {
-      searchTerm = searchInput.value.trim().toLowerCase();
-      renderPapers();
-    });
   }
 
   function makeProjectItem(project) {
@@ -566,7 +470,6 @@
           return (b.year || 0) - (a.year || 0);
         });
         buildKeywordFilters();
-        updateFilterLabel();
         renderPapers();
       })
       .catch(function (err) {
